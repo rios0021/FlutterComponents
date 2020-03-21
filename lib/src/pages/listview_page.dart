@@ -48,6 +48,7 @@ class _ListaPageState extends State<ListaPage> {
   }
 
   Widget _crearLista() {
+    // final size = MediaQuery.of(context).size.width;
     return RefreshIndicator(
       onRefresh: obtenerPagina1,
       child: ListView.builder(
@@ -59,6 +60,8 @@ class _ListaPageState extends State<ListaPage> {
           return FadeInImage(
             placeholder: AssetImage('assets/loading.gif'),
             image: NetworkImage('https://picsum.photos/500/300/?image=$imagen'),
+            // height: 300.0,
+            // width: size,
           );
         },
       ),
